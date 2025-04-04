@@ -1,0 +1,106 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em; /* 75% larger than default */
+    margin-bottom: 20px;
+}
+
+.row {
+    width: 95%;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+
+section {
+    position: relative;
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #e0e0e0;
+}
+
+section .title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 1px solid black;
+    background-color: #c0c0c0;
+    padding: 5px 10px;
+    font-size: 1.25em; /* 25% larger than default */
+}
+
+section p {
+    margin-top: 30px; /* to prevent overlap with title */
+}
+
+/* Desktop View (992px and above) */
+@media (min-width: 992px) {
+    section {
+        float: left;
+        width: 32.33%; /* Approximately 1/3, adjusted for margins */
+        margin-right: 1%; /* creates space between sections */
+    }
+
+    section:last-child {
+        margin-right: 0;
+    }
+}
+
+/* Tablet View (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    section {
+        width: 49%;
+        float: left;
+        margin-right: 2%;
+    }
+
+    section:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    section:last-child {
+        width: 100%;
+        margin-right: 0;
+        clear: left;
+    }
+}
+
+/* Mobile View (767px and below) */
+@media (max-width: 767px) {
+    section {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+/* background colors for each section title */
+#chicken .title {
+    background-color: #ffcccc;
+}
+
+#beef .title {
+    background-color: #cce0ff;
+}
+
+#sushi .title {
+    background-color: #ccffcc;
+}
+
+/* background colors for each section */
+#chicken {
+    background-color: #ffe0e0;
+}
+
+#beef {
+    background-color: #e0f0ff;
+}
+
+#sushi {
+    background-color: #e0ffe0;
+}
